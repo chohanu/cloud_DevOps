@@ -1,7 +1,4 @@
----
 
-
----
 
 <h1 id="introduction">Introduction</h1>
 <p>This file is going to guide you through the steps that were needed to deploy Trading application on Amazon Cloud Server.Trading application is a Java based application that implements spring boot framework and acts as a REST API that allows user to buy/sell <a href="http://stocks.It">stocks.It</a> collects real time data from a third party API,IEX, through Apache HTTP client and uses a PostGreSql database to store data.</p>
@@ -34,4 +31,5 @@ sudo docker run --name jrvs-psql \
 <p>Also, a  Jenkins CI/CD pipeline was created to further automate the process (not having to maven package and upload the application everytime changes are made to the code inside the github repository).</p>
 <p>The way a Jenkins pipeline works is that whenever a change is commited is to the github repository,a Jenkin’s server present inside an EC2 instance will git pull and maven package it,and create a jar/zip of the application and deploy the application to either prod(Production) or Dev(development) environment depending on the github branch that is being committed.<br>
 Diagram below shows the architecture of the deployment with Elastic Beanstalk and Jenkins.</p>
+<img src="/jenkin.PNG">
 
